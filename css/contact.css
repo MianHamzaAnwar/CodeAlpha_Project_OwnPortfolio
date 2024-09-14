@@ -1,0 +1,297 @@
+/* Reset default padding, margin, and box-sizing */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Set body background color to black */
+.body {
+    background-color: #000;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    margin: 50px;
+	border-radius: 10px;
+	box-shadow: 0 0 40px rgba(34, 33, 33, 0.678);
+}
+
+/* Contact section */
+.contact {
+    background: radial-gradient(circle, rgba(4, 155, 179, 0.678), transparent);
+    color: white;
+    padding: 50px 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.contact .title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 40px;
+    position: relative;
+    animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.column h1 {
+    color: #0ef;
+    padding-bottom: 10px;
+}
+
+.column p {
+    padding-bottom: 100px;
+    width: 90%;
+}
+
+/* Contact section layout */
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact .contact-content .column {
+    width: calc(50% - 20px);
+    margin-bottom: 30px;
+    animation: fadeUp 1s ease-in-out;
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Info section styling */
+.info i {
+    color: #0ef;
+    margin-right: 10px;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.info .head,
+.info .sub-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #0ef;
+    display: flex;
+    align-items: center;
+}
+
+/* Form input styling */
+.field input {
+    margin-left: 20px;
+}
+
+.column form {
+    padding-top: 100px;
+}
+
+.column p {
+    padding-left: 18px;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    padding: 15px 0;
+    margin: 3px;
+    font-size: 17px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact .right form .button-area {
+    display: flex;
+    align-items: center;
+}
+
+/* Button styling */
+.contact .right form .button-area button {
+    color: #fff;
+    width: 140px;
+    height: 45px;
+    background: #0fe;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 10px #0ef;
+}
+
+.contact .right form .button-area button:hover {
+    color: #0fe;
+    background-color: white;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.span {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+/* Social menu styling */
+.social-menu ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.social-menu ul li {
+    margin: 0 15px;
+}
+
+.social-menu ul li a {
+    display: block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    background-color: #1e3551;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.social-menu ul li a:hover {
+    background-color: #0ef;
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background: #111;
+    padding: 20px;
+    color: #888c8d;
+    text-align: center;
+}
+
+footer span a {
+    color: #ebedf0;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact .contact-content .column {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .contact .right form .field input,
+    .contact .right form .textarea textarea {
+        font-size: 16px;
+    }
+
+    .contact .right form .button-area button {
+        width: 120px;
+        font-size: 14px;
+    }
+
+    .contact .title {
+        font-size: 30px;
+    }
+
+    .social-menu ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .social-menu ul li {
+        margin: 10px 0;
+    }
+}
+/* Responsive adjustments for info section */
+@media (max-width: 768px) {
+	.info {
+        padding:10px 10px 10px 0; 
+		text-align: center;/* Further adjust padding for very small screens */
+    }
+	
+    .info .head,
+    .info .sub-title {
+		font-size: 16px;
+		 /* Further reduce font size */
+    }
+	.info .span{
+		font-size: 18px;
+	}
+    .info i {
+        font-size: 18px; /* Further reduce icon size */
+    }}
+@media (max-width: 480px) {
+    .info {
+        padding:10px 10px 10px 0; /* Further adjust padding for very small screens */
+    }
+	
+    .info .head,
+    .info .sub-title {
+		font-size: 10px;
+		 /* Further reduce font size */
+    }
+	.info .span{
+		font-size: 14px;
+	}
+    .info i {
+        font-size: 12px; /* Further reduce icon size */
+    }
+}
